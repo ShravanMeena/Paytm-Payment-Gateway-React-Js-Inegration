@@ -10,6 +10,7 @@ function App() {
     const res = await loadScript(
       "https://securegw.paytm.in/merchantpgpui/checkoutjs/merchants/ZHMpwy77672646700865.js"
     );
+
     // REACT_APP_PAYMENT_SCRIPT;
     if (!res) {
       alert("SDK failed to load. Are you online?");
@@ -27,7 +28,6 @@ function App() {
         orderId /* update order id */,
         token /* update token value */,
         tokenType: "TXN_TOKEN",
-        // amount: '100' /* update amount */,
       },
       merchant: {
         redirect: false,
@@ -60,11 +60,10 @@ function App() {
           })
           .catch(function onError(error) {
             console.log("error => ", error);
-            console.log("ERROR Hoga pakkaa.");
           });
       });
     } else {
-      console.log("..KY HUA YAAR.");
+      console.log("Something went wrong!");
     }
   };
 
