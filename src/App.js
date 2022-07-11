@@ -29,9 +29,9 @@ function App() {
         token /* update token value */,
         tokenType: "TXN_TOKEN",
       },
-      merchant: {
-        redirect: false,
-      },
+      // merchant: {
+      //   redirect: false,
+      // },
       handler: {
         transactionStatus: function transactionStatus(paymentStatus) {
           console.log(paymentStatus, "paymentStatus");
